@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Проект_тринажёр_по_химии_Оформленный.UserControls.DatNazvanieVeshestvControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Проект_тринажёр_по_химии_Оформленный.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="82"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto" MinHeight="78.04"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.ColumnSpan="4"  Text="Сопоставьте формулу вещества с его названием" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" Margin="83,10,0,82" Grid.Column="1" Width="506" Grid.RowSpan="2"/>
+
+
+        <ItemsControl x:Name="substancesItemsControl" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" ItemsSource="{Binding Substances}" Margin="5,5,10,5">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="5" Padding="5">
+                        <StackPanel Orientation="Vertical" AllowDrop="True" Drop="Substance_Drop" Tag="{Binding Formula}" Background="White">
+                            <TextBlock Text="{Binding Formula}" HorizontalAlignment="Center" FontWeight="Bold"/>
+                            <TextBlock x:Name="nameTextBlock" Text="{Binding AssignedName}" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+
+        <ListBox x:Name="namesListBox" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" ItemsSource="{Binding SubstanceNames}" Margin="5,10,5,10" PreviewMouseLeftButtonDown="NamesListBox_PreviewMouseLeftButtonDown" MouseMove="NamesListBox_MouseMove"/>
+        <Border x:Name="Выход" Grid.Column="5" MouseLeftButtonDown="Выход_MouseLeftButtonDown" Margin="4,14,4,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="kkh" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Выход" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <Button Background="White" Grid.Row="3" Grid.Column="2" Content="Проверить" Click="CheckAnswersButton_Click" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,10" Width="334"/>
+    </Grid>
+</UserControl>

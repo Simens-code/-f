@@ -1,0 +1,85 @@
+﻿<Window x:Class="Проект_тринажёр_по_химии_Оформленный.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Проект_тринажёр_по_химии_Оформленный"
+        xmlns:uc="clr-namespace:Проект_тринажёр_по_химии_Оформленный.UserControls"
+
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1024" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <Border Height="650" Width="1024" CornerRadius="30">
+        <Border.Background>
+            <RadialGradientBrush GradientOrigin="0,0">
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="Orange" Offset="0.13"/>
+            </RadialGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="30 30 0 30" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="White"/>
+            <Border CornerRadius="30 0 0 30" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="white">
+
+                <StackPanel Margin="0 0 0 0">
+                    <Image  MouseLeftButtonDown="climatebtn_MouseLeftButtonDown"  Source="/icons8-тестовый-аккаунт-48.png" Width="100" Height="150" />
+                    <Border x:Name="zadanie" MouseLeftButtonDown="carbtn_MouseLeftButtonDown" Height="50" Margin="0 50 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="carbg" Grid.Column="0" Background="Orange"/>
+                            <Border x:Name="carbord" Grid.Column="1" Background="white" Opacity="0.5"/>
+                            <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Задания" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="interaktiv" MouseLeftButtonDown="battarybtn_MouseLeftButtonDown" Height="50" Margin="0 10 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="batbg" Grid.Column="0" Background="Orange"/>
+                            <Border x:Name="batbord" Grid.Column="1" Background="White" Opacity="0.5"/>
+                            <TextBlock Grid.Column="1"  Foreground="Black" FontSize="20" Text="Интерактив" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="teoria" MouseLeftButtonDown="climatebtn_MouseLeftButtonDown" Height="50" Margin="0 10 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="clbg" Grid.Column="0" Background="Orange" />
+                            <Border x:Name="clbord" Grid.Column="1" Background="White" Opacity="0.5"/>
+                            <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Теория" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Spravocniy" MouseLeftButtonDown="Spravocniy_MouseLeftButtonDown" Height="50" Margin="0 10 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="kil" Grid.Column="0" Background="Orange" />
+                            <Border x:Name="kilk" Grid.Column="1" Background="White" Opacity="0.5"/>
+                            <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Справочник" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+            </Border>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <uc:TemiKZadaniyamControl Visibility="Visible" x:Name="Temi"/>
+                
+
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

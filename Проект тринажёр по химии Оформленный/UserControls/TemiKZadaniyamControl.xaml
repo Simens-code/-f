@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Проект_тринажёр_по_химии_Оформленный.UserControls.TemiKZadaniyamControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Проект_тринажёр_по_химии_Оформленный.UserControls"
+             mc:Ignorable="d" 
+                      d:DesignHeight="610" d:DesignWidth="954">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="183*" />
+            <RowDefinition Height="87*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.ColumnSpan="3" Margin="238,0,238,0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border x:Name="Alkani" MouseLeftButtonDown="Alkani_MouseLeftButtonDown" Height="50" Margin="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="carbord" Grid.Column="1" Background="White" Opacity="0.5" Height="50" VerticalAlignment="Top" CornerRadius="15"/>
+                    <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Алканы" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Border>
+            <Border x:Name="Veshestva" Grid.Row="1"  MouseLeftButtonDown="Veshestva_MouseLeftButtonDown" Height="50" Margin="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="yttu" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                    <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Вещества" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Border>
+            
+        </Grid>
+    </Grid>
+
+</UserControl>

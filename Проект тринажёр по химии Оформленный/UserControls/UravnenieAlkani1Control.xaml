@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="Проект_тринажёр_по_химии_Оформленный.UserControls.UravnenieAlkani1Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Проект_тринажёр_по_химии_Оформленный.UserControls"
+             mc:Ignorable="d" 
+             d:DesignWidth="954" Height="748">
+    <Grid  Height="780" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="110"/>
+            <RowDefinition Height="Auto" MinHeight="110"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto"/>
+            
+          
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border x:Name="Выход" Grid.Column="3" MouseLeftButtonDown="Выход_MouseLeftButtonDown" Margin="30">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="kkh" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Выход" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1" Grid.Column="0" Margin="5,5,4,5" >
+            <Grid>
+                <TextBox x:Name="reaction1Source" Height="100"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="6,5,5,5" >
+            <TextBlock Text="=" Margin="10"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" Margin="5,5,6,5">
+            <Grid>
+                <TextBox x:Name="reaction1Target" Height="100"/>
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Row="2" Grid.Column="0" Margin="5,5,4,5">
+            <Grid>
+                <TextBox x:Name="reaction2Source" Height="100"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1" Margin="6,5,5,5" >
+            <TextBlock Text="=" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2" Margin="5,5,6,5">
+            <Grid>
+                <TextBox x:Name="reaction2Target" Height="100"/>
+            </Grid>
+        </Grid>
+
+
+
+        <Grid Grid.Row="3" Grid.Column="0" Margin="5,5,4,5">
+            <Grid>
+                <TextBox x:Name="reaction3Source" Height="100"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="1" Margin="6,5,5,5" >
+            <TextBlock Text="=" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="2" Margin="5,5,6,5">
+            <Grid>
+                <TextBox x:Name="reaction3Target" Height="100"/>
+            </Grid>
+        </Grid>
+
+
+
+        <Grid Grid.Row="4" Grid.Column="0" Margin="5,5,4,5">
+            <Grid>
+                <TextBox x:Name="reaction4Source" Height="100"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="1" Margin="6,5,5,5" >
+            <TextBlock Text="=" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="2" Margin="5,5,6,5">
+            <Grid>
+                <TextBox x:Name="reaction4Target" Height="100"/>
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Row="5" Grid.ColumnSpan="3" Margin="5,5,6,5">
+            <TextBlock Text="Список элементов для перетаскивания:" Margin="10,10,-232,10" TextAlignment="Center" FontSize="25"/>
+        </Grid>
+
+
+        <Grid Grid.Row="6" Grid.ColumnSpan="3" Margin="5,5,6,5">
+            <ListBox x:Name="DragSourceList" Margin="5,5,-232,5" Height="100" />
+        </Grid>
+        <Button Grid.Row="8" Grid.ColumnSpan="2" Content="Проверить ответы" Click="CheckAnswersButton_Click" Margin="62,0,62,89" Grid.Column="1" Height="50"/>
+    </Grid>
+</UserControl>

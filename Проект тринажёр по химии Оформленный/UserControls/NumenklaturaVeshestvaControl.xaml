@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="Проект_тринажёр_по_химии_Оформленный.UserControls.NumenklaturaVeshestvaControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Проект_тринажёр_по_химии_Оформленный.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"  />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Text="Название органического вещества" HorizontalAlignment="Center" FontWeight="Bold" Margin="15" Width="205"/>
+
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="1. Расставьте атомы водорода:" Margin="5,5,5,5"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="7" Orientation="Horizontal" Margin="0,0,56,26" Grid.RowSpan="2">
+            <ComboBox x:Name="c1hComboBox" Width="50" Margin="2" ItemsSource="{Binding HydrogenOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="c2hComboBox" Width="50" Margin="2" ItemsSource="{Binding HydrogenOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="c3hComboBox" Width="50" Margin="2" ItemsSource="{Binding HydrogenOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="c4hComboBox" Width="50" Margin="2" ItemsSource="{Binding HydrogenOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="c5hComboBox" Width="50" Margin="2" ItemsSource="{Binding HydrogenOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="c6hComboBox" Width="50" Margin="2" ItemsSource="{Binding HydrogenOptions}"/>
+            <TextBlock Text="  |" Margin="2"/>
+            <ComboBox x:Name="c7hComboBox" Width="50" Margin="2" ItemsSource="{Binding HydrogenOptions}"/>
+            <TextBlock Text="  |" Margin="2"/>
+            <ComboBox x:Name="c8hComboBox" Width="50" Margin="2" ItemsSource="{Binding HydrogenOptions}"/>
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="2. Пронумеруйте цепь:" Margin="5,5,5,5"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="7" Orientation="Horizontal" Margin="0,0,56,26" Grid.RowSpan="2">
+            <ComboBox x:Name="n1ComboBox" Width="50" Margin="2" ItemsSource="{Binding NumberOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="n2ComboBox" Width="50" Margin="2" ItemsSource="{Binding NumberOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="n3ComboBox" Width="50" Margin="2" ItemsSource="{Binding NumberOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="n4ComboBox" Width="50" Margin="2" ItemsSource="{Binding NumberOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="n5ComboBox" Width="50" Margin="2" ItemsSource="{Binding NumberOptions}"/>
+            <TextBlock Text="—" Margin="2"/>
+            <ComboBox x:Name="n6ComboBox" Width="50" Margin="2" ItemsSource="{Binding NumberOptions}"/>
+
+        </StackPanel>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="3. Назовите заместители:" Margin="5,5,5,5"/>
+        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="7" Orientation="Horizontal" Margin="0,0,56,26" Grid.RowSpan="2">
+            <TextBlock Text="Заместитель 1:" Margin="2"/>
+            <ComboBox x:Name="substituent1ComboBox" Width="100" ItemsSource="{Binding SubstituentOptions}" Height="18"/>
+            <TextBlock Text="Заместитель 2:" Margin="2"/>
+            <ComboBox x:Name="substituent2ComboBox" Width="100" Margin="2" ItemsSource="{Binding SubstituentOptions}" Height="16"/>
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Название вещества:" Margin="5,5,5,5"/>
+        <StackPanel Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="7" Orientation="Horizontal" Margin="0,0,56,40" Grid.RowSpan="2">
+            <ComboBox x:Name="position1ComboBox" Width="50" Margin="2" ItemsSource="{Binding NumberOptions}"/>
+            <TextBlock Text="," Margin="2"/>
+            <ComboBox x:Name="position2ComboBox" Width="50" Margin="2" ItemsSource="{Binding NumberOptions}"/>
+            <TextBlock Text="-" Margin="2"/>
+            <ComboBox x:Name="diTriComboBox" Width="50" Margin="2" ItemsSource="{Binding DiTriOptions}"/>
+            <TextBlock Text="-" Margin="2"/>
+            <TextBox x:Name="substituentNameTextBox" Width="100" Margin="2" Text="{Binding SelectedSubstituent}"/>
+            <ComboBox x:Name="chainNameComboBox" Width="80" Margin="2" ItemsSource="{Binding ChainOptions}"/>
+        </StackPanel>
+
+        <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Content="Проверить" Click="CheckAnswersButton_Click" HorizontalAlignment="Center" Margin="0,10,0,-11" Width="150"/>
+        <Border x:Name="Выход" Grid.Column="7" MouseLeftButtonDown="Выход_MouseLeftButtonDown" Margin="4,14,4,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="kkh" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Выход" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

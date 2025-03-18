@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Проект_тринажёр_по_химии_Оформленный.UserControls.ZadaniyaAlkaniControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Проект_тринажёр_по_химии_Оформленный.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="610" d:DesignWidth="954">
+    <Grid>
+       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Border x:Name="Уравнение2" MouseLeftButtonDown="Уравнение2_MouseLeftButtonDown" Height="50" Margin="15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="carbord" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15" />
+                            <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Уравнение2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Border x:Name="Соотношение" MouseLeftButtonDown="Соотношение_MouseLeftButtonDown" Height="50" Margin="15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="carbor" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                            <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Соотношение" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Border x:Name="Таблица" MouseLeftButtonDown="Таблица_MouseLeftButtonDown" Height="50" Margin="15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="carbo" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                            <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Таблица" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Border x:Name="Уравнение1" MouseLeftButtonDown="Уравнение1_MouseLeftButtonDown" Height="50" Margin="15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="jsj" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                            <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Уравнение1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border x:Name="Выход" Grid.Column="2" MouseLeftButtonDown="Выход_MouseLeftButtonDown" Height="50" Margin="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="kkh" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                    <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Выход" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

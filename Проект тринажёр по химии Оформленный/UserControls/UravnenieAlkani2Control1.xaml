@@ -1,0 +1,197 @@
+﻿<UserControl x:Class="Проект_тринажёр_по_химии_Оформленный.UserControls.UravnenieAlkani2Control1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Проект_тринажёр_по_химии_Оформленный.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <Grid  Margin="0,0,0,-44">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Border x:Name="Выход" Grid.Column="9" Grid.ColumnSpan="3" MouseLeftButtonDown="Выход_MouseLeftButtonDown" Margin="30">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="kkh" Grid.Column="1" Background="White" Opacity="0.5" CornerRadius="15"/>
+                <TextBlock Grid.Column="1" Foreground="Black" FontSize="20" Text="Выход" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="0" Grid.ColumnSpan="6" Margin="10">
+            <TextBlock Text="Реакции ионного обмена" FontWeight="Bold" FontSize="16" TextAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.ColumnSpan="6" Margin="5" >
+            <TextBlock Text="1 шаг. Подберите продукты реакции, исходя из предложенных реагентов:" Margin="5" />
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="0" Margin="5" >
+            <TextBlock Text="КОН + H2SO4 = "  Margin="5" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1" Margin="5" >
+            <ComboBox x:Name="productsComboBox" Width="150" Margin="5"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2" Margin="5">
+            <TextBlock  Text="+ " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="3" Margin="5">
+            <ComboBox x:Name="productsComboBox2" Width="150" Margin="5"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="4" Margin="5">
+
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="5" Margin="5">
+
+        </Grid>
+
+
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="6" Margin="5" >
+            <TextBlock Text="2 шаг. Расставьте коэффициенты в уравнении реакции:" Margin="5" />
+        </Grid>
+
+        <Grid Grid.Row="4" Grid.Column="0" Margin="5" >
+            <ComboBox x:Name="coef1ComboBox" Width="50" Margin="5" />
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="1" Margin="5" >
+            <TextBlock Text="КОН + " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="2" Margin="5" >
+            <ComboBox x:Name="coef2ComboBox" Width="50" Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="3" Margin="5" >
+            <TextBlock Text=" H2SO4 =  " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="4" Margin="5">
+            <ComboBox x:Name="coef3ComboBox" Width="50" Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="5" Margin="5" >
+            <TextBlock Text="K2SO4 + " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="6" Margin="5">
+            <ComboBox x:Name="coef4ComboBox" Width="50" Margin="5" />
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="7" Margin="5">
+            <TextBlock Text="H2O" Margin="5"  />
+        </Grid>
+
+
+        <Grid Grid.Row="5" Grid.ColumnSpan="6" Margin="5" >
+            <TextBlock Text="3 шаг. Выберите продукт реакции, не распадающийся на ионы:" Margin="5" />
+        </Grid>
+
+        <Grid Grid.Row="6" Grid.ColumnSpan="6" Margin="5">
+            <TextBlock x:Name="reactionEquation" Margin="5" TextAlignment="Center" />
+        </Grid>
+        <Grid Grid.Row="7" Grid.ColumnSpan="6" Margin="5">
+            <ComboBox x:Name="nonIonicComboBox" Width="200" Margin="5"/>
+        </Grid>
+
+
+        <Grid Grid.Row="8" Grid.ColumnSpan="6" Margin="5">
+            <TextBlock Text="4 шаг. Запишите полное ионное уравнение реакции:" Margin="5" />
+        </Grid>
+
+        <Grid Grid.Row="9" Grid.Column="0" Margin="5">
+            <ComboBox x:Name="ion1ComboBox" Width="60" Margin="5" />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="1" Margin="5" >
+            <TextBlock Text=" + " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="2" Margin="5">
+            <ComboBox x:Name="ion2ComboBox" Width="60" Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="3" Margin="5" >
+            <TextBlock Text=" + " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="4" Margin="5" >
+            <ComboBox x:Name="ion3ComboBox" Width="60" Margin="5"/>
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="5" Margin="5" >
+            <TextBlock Text=" + " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="6" Margin="5" >
+            <ComboBox x:Name="ion4ComboBox" Width="60" Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="7" Margin="5">
+            <TextBlock Text=" = " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="8" Margin="5" >
+            <ComboBox x:Name="ion5ComboBox" Width="60" Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="9" Margin="5">
+            <TextBlock Text=" + " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="10" Margin="5">
+            <ComboBox x:Name="ion6ComboBox" Width="60" Margin="5" />
+        </Grid>
+        <Grid Grid.Row="9" Grid.Column="11" Margin="5">
+            <TextBlock x:Name="nonIonElement" Margin="5" />
+        </Grid>
+
+
+
+        <Grid Grid.Row="10" Grid.ColumnSpan="6" Margin="5" >
+            <TextBlock Text="5 шаг. Исключите из обеих частей равенства одинаковые ионы, т.е. ионы, не участвующие в реакции:" Margin="5" />
+        </Grid>
+        <Grid Grid.Row="11" Grid.ColumnSpan="6" Margin="5">
+            <TextBlock x:Name="fullIonEquation" Margin="5" TextAlignment="Center" />
+        </Grid>
+
+
+
+
+        <Grid Grid.Row="12" Grid.ColumnSpan="6" Margin="5">
+            <TextBlock Text="6 шаг. Запишите сокращенное ионное уравнение реакции:" Margin="5"/>
+        </Grid>
+        <Grid Grid.Row="13" Grid.Column="0" Margin="5" >
+            <ComboBox x:Name="shortIon1ComboBox" Width="70" Margin="5" />
+        </Grid>
+        <Grid Grid.Row="13" Grid.Column="1" Margin="5" >
+            <TextBlock Text=" + " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="13" Grid.Column="2" Margin="5" >
+            <ComboBox x:Name="shortIon2ComboBox" Width="70" Margin="5" />
+        </Grid>
+        <Grid Grid.Row="13" Grid.Column="3" Margin="5">
+            <TextBlock Text=" = " Margin="5"  />
+        </Grid>
+        <Grid Grid.Row="13" Grid.Column="4" Margin="5" >
+            <TextBlock x:Name="shortIonProduct" Margin="5"  />
+        </Grid>
+        <Button Grid.Row="14" Grid.ColumnSpan="4" Content="Проверить ответы" Click="CheckAnswersButton_Click" Margin="45,10,28,20" Grid.Column="4"/>
+    </Grid>
+</UserControl>
